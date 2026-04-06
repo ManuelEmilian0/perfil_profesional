@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manuel Emiliano Moreno — Urbanista & Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░░ NAVBAR ░░░ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">
+        <span class="logo-bracket">[</span>EM<span class="logo-bracket">]</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">Sobre Mí</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portafolio</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <span class="toggle-icon" id="toggleIcon">☀</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ░░░ HERO ░░░ -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="dot"></span> Disponible para proyectos
+      </p>
+      <h1 class="hero-name">
+        <span class="line" data-delay="0">Manuel</span>
+        <span class="line" data-delay="1">Emiliano</span>
+        <span class="line accent" data-delay="2">Moreno Pérez</span>
+      </h1>
+      <p class="hero-title">Project Manager Tech · Urbanista · GIS Developer</p>
+      <p class="hero-sub">
+        Cruzo el análisis espacial avanzado con la ciencia de datos<br />
+        para diseñar ciudades más inteligentes.
+      </p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-primary">Ver Proyectos</a>
+        <a href="#contact" class="btn btn-ghost">Contacto</a>
+      </div>
+    </div>
+    <div class="hero-coords" aria-hidden="true">
+      <span>19°25′N</span>
+      <span>99°08′O</span>
+      <span>CDMX</span>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-line"></span>
+      <span class="scroll-label">scroll</span>
+    </div>
+  </section>
+
+  <!-- ░░░ SOBRE MÍ ░░░ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label">01 — Sobre Mí</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Donde el territorio<br /><em>se vuelve dato</em></h2>
+          <p>
+            Soy urbanista egresado de la <strong>UNAM</strong> con experiencia en análisis territorial cuantitativo/cualitativo 
+            multiescalar. Mi trabajo fusiona los Sistemas de Información Geográfica con la ciencia de datos y el desarrollo 
+            web para crear herramientas que optimizan la toma de decisiones en ciudades y territorios.
+          </p>
+          <p>
+            He colaborado como cartógrafo en la <strong>UBA (Buenos Aires)</strong>, analista GIS en consultorías de planeación 
+            urbana y como investigador en el <strong>IIEc-UNAM</strong>. Cada proyecto es una oportunidad para leer el espacio 
+            con algoritmos y contarlo con mapas.
+          </p>
+          <div class="about-facts">
+            <div class="fact">
+              <span class="fact-num">4+</span>
+              <span class="fact-label">Años de experiencia</span>
+            </div>
+            <div class="fact">
+              <span class="fact-num">8</span>
+              <span class="fact-label">Proyectos urbanos</span>
+            </div>
+            <div class="fact">
+              <span class="fact-num">3</span>
+              <span class="fact-label">Instituciones</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <span class="tl-date">2025 – 2026</span>
+              <strong>Analista GIS · CPD&T</strong>
+              <p>Diagnósticos urbanos, normativa y planes de ordenamiento territorial.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <span class="tl-date">Mar – Ago 2025</span>
+              <strong>Cartógrafo · UBA Buenos Aires</strong>
+              <p>Fotointerpretación satelital, coberturas de suelo y análisis NDVI en el AMBA.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <span class="tl-date">Jul 2024 – Hoy</span>
+              <strong>Investigador · IIEc UNAM</strong>
+              <p>Visualizadores geográficos y análisis de datos para proyectos de innovación tecnológica.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <span class="tl-date">2022 – 2025</span>
+              <strong>Logística · Servicios Médicos Divino Niño</strong>
+              <p>Coordinación de eventos de salud pública en zonas de alta marginación, CDMX.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ SKILLS ░░░ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label">02 — Habilidades</div>
+      <h2 class="section-title">Stack técnico</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">🌐</span>
+            <h3>GIS & Análisis Espacial</h3>
+          </div>
+          <div class="tags">
+            <span class="tag tag-geo">QGIS</span>
+            <span class="tag tag-geo">ArcGIS</span>
+            <span class="tag tag-geo">Google Earth Engine</span>
+            <span class="tag tag-geo">NDVI Analysis</span>
+            <span class="tag tag-geo">Análisis Topológico</span>
+            <span class="tag tag-geo">Fotointerpretación</span>
+            <span class="tag tag-geo">Geoda</span>
+            <span class="tag tag-geo">PostgreSQL/PostGIS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">⚙️</span>
+            <h3>Data & Algoritmos</h3>
+          </div>
+          <div class="tags">
+            <span class="tag tag-data">Python</span>
+            <span class="tag tag-data">R / GeoDa</span>
+            <span class="tag tag-data">K-Means Clustering</span>
+            <span class="tag tag-data">TSP / Ruteo Espacial</span>
+            <span class="tag tag-data">Análisis Multiescalar</span>
+            <span class="tag tag-data">Automatización DB</span>
+            <span class="tag tag-data">Estadística Espacial</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">💻</span>
+            <h3>Desarrollo Web</h3>
+          </div>
+          <div class="tags">
+            <span class="tag tag-web">HTML5 / CSS3</span>
+            <span class="tag tag-web">JavaScript</span>
+            <span class="tag tag-web">Leaflet.js</span>
+            <span class="tag tag-web">GeoJSON / TopoJSON</span>
+            <span class="tag tag-web">GitHub Pages</span>
+            <span class="tag tag-web">UI/UX Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="skill-group-icon">🏙️</span>
+            <h3>Urbanismo & Diseño</h3>
+          </div>
+          <div class="tags">
+            <span class="tag tag-urban">AutoCAD</span>
+            <span class="tag tag-urban">SketchUp</span>
+            <span class="tag tag-urban">Diseño Urbano</span>
+            <span class="tag tag-urban">Diagnóstico Territorial</span>
+            <span class="tag tag-urban">Planes de Ordenamiento</span>
+            <span class="tag tag-urban">Normativa Urbana</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra de nivel -->
+      <div class="proficiency-bars">
+        <div class="bar-item">
+          <span>GIS & Spatial</span>
+          <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
+          <span class="bar-pct">92%</span>
+        </div>
+        <div class="bar-item">
+          <span>Python / R</span>
+          <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+          <span class="bar-pct">80%</span>
+        </div>
+        <div class="bar-item">
+          <span>Web Dev</span>
+          <div class="bar-track"><div class="bar-fill" data-width="74"></div></div>
+          <span class="bar-pct">74%</span>
+        </div>
+        <div class="bar-item">
+          <span>Urbanismo</span>
+          <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
+          <span class="bar-pct">88%</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░░ PORTAFOLIO ░░░ -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-label">03 — Portafolio</div>
+      <h2 class="section-title">Proyectos destacados</h2>
+      <div class="portfolio-grid">
+
+        <!-- CARD 1 — Principal -->
+        <div class="card card-featured">
+          <div class="card-badge">Featured</div>
+          <div class="card-map-bg" aria-hidden="true"></div>
+          <div class="card-content">
+            <h3 class="card-title">Geointeligencia Multiescalar</h3>
+            <p class="card-desc">
+              Motor de optimización espacial y dashboards web interactivos para eficientar la toma de 
+              decisiones en planeación urbana y logística territorial. Integración de algoritmos de 
+              ruteo con visualización cartográfica en tiempo real.
+            </p>
+            <div class="card-tags">
+              <span>QGIS</span>
+              <span>Python</span>
+              <span>Leaflet.js</span>
+              <span>GeoJSON</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+              Ver Dashboard en Vivo ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+          <div class="card-content">
+            <h3 class="card-title">Análisis NDVI — AMBA</h3>
+            <p class="card-desc">
+              Evaluación de coberturas del suelo y calidad ecológica en el Área Metropolitana de 
+              Buenos Aires mediante análisis estadístico y satelital.
+            </p>
+            <div class="card-tags">
+              <span>Earth Engine</span>
+              <span>Python</span>
+              <span>NDVI</span>
+              <span>R</span>
+            </div>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Ver proyecto ↗</a>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+          <div class="card-content">
+            <h3 class="card-title">PDU Tulum — Quintana Roo</h3>
+            <p class="card-desc">
+              Participación en el Plan de Desarrollo Urbano del Centro de Población de Tulum. 
+              Análisis de normativa, cartografía y diagnóstico territorial.
+            </p>
+            <div class="card-tags">
+              <span>AutoCAD</span>
+              <span>QGIS</span>
+              <span>Normativa</span>
+            </div>
+            <a href="#" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Ver proyecto ↗</a>
+          </div>
+        </div>
+
+        <!-- CARD 4 — Add project placeholder -->
+        <div class="card card-placeholder">
+          <div class="card-content card-content-center">
+            <span class="plus-icon">+</span>
+            <p>Agregar nuevo proyecto</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ CONTACTO ░░░ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label">04 — Contacto</div>
+      <div class="contact-inner">
+        <div class="contact-text">
+          <h2 class="section-title">¿Tienes un proyecto<br /><em>en mente?</em></h2>
+          <p>Hablemos sobre ciudades, datos y tecnología. Siempre abierto a colaboraciones interesantes.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:emisliano974@gmail.com" class="contact-link">
+            <span class="contact-icon">✉</span>
+            <span>emisliano974@gmail.com</span>
+          </a>
+          <a href="https://github.com/" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/" class="contact-link" target="_blank" rel="noopener">
+            <span class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </span>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="footer">
+    <div class="container">
+      <span>© 2026 Manuel Emiliano Moreno Pérez</span>
+      <span class="footer-coords">19.4326° N, 99.1332° W · CDMX</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
