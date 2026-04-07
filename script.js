@@ -6,11 +6,11 @@
   'use strict';
 
   /* ── 1. THEME TOGGLE ──────────────────────────────────────── */
-  const html        = document.documentElement;
+  const html = document.documentElement;
   const themeToggle = document.getElementById('themeToggle');
-  const toggleIcon  = document.getElementById('toggleIcon');
+  const toggleIcon = document.getElementById('toggleIcon');
 
-  const DARK  = 'dark';
+  const DARK = 'dark';
   const LIGHT = 'light';
 
   // Persist preference
@@ -38,7 +38,7 @@
   }, { passive: true });
 
   // Highlight active nav link on scroll
-  const sections   = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a');
 
   const observer = new IntersectionObserver((entries) => {
@@ -61,7 +61,7 @@
 
   /* ── 3. HAMBURGER (mobile menu) ───────────────────────────── */
   const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
+  const navLinks = document.getElementById('navLinks');
 
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
@@ -103,26 +103,63 @@
 
   revealEls.forEach(el => revealObserver.observe(el));
 
-  /* ── 5. PROFICIENCY BARS animation ───────────────────────── */
-  const bars = document.querySelectorAll('.bar-fill');
-  let barsAnimated = false;
+  /* ── 5. SKILLS RADAR CHART ─────────────────────────────────── */
+  const canvas = document.getElementById('skillsRadar');
+  if (canvas && typeof Chart !== 'undefined') {
+    const ctx = canvas.getContext('2d');
 
-  const barObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !barsAnimated) {
-        barsAnimated = true;
-        bars.forEach(bar => {
-          const w = bar.getAttribute('data-width');
-          // Short delay then animate
-          setTimeout(() => { bar.style.width = w + '%'; }, 200);
-        });
-        barObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.3 });
+    let chartRendered = false;
+    const chartObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !chartRendered) {
+          chartRendered = true;
 
-  const barsContainer = document.querySelector('.proficiency-bars');
-  if (barsContainer) barObserver.observe(barsContainer);
+          const docStyle = getComputedStyle(document.documentElement);
+          const accentColor = docStyle.getPropertyValue('--accent').trim() || '#f5ff00';
+          const accentColorGlow = docStyle.getPropertyValue('--accent-glow').trim() || 'rgba(245,255,0,0.2)';
+          const textColor = docStyle.getPropertyValue('--text-2').trim() || '#a3a3a3';
+          const gridColor = docStyle.getPropertyValue('--border').trim() || 'rgba(255,255,255,0.1)';
+
+          new Chart(ctx, {
+            type: 'radar',
+            data: {
+              labels: ['Office', 'SIG', 'Desarrollo Web', 'Python', 'Análisis estadístico', 'Diseño urbano', 'Modelado 3D', 'Trabajo en equipo'],
+              datasets: [{
+                label: 'Nivel (%)',
+                data: [95, 93, 91, 89, 92, 88, 82, 94],
+                backgroundColor: accentColorGlow,
+                borderColor: accentColor,
+                pointBackgroundColor: accentColor,
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: accentColor,
+                borderWidth: 2,
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                r: {
+                  angleLines: { color: gridColor },
+                  grid: { color: gridColor },
+                  pointLabels: {
+                    color: textColor,
+                    font: { family: "'Inter', sans-serif", size: 12, weight: '500' }
+                  },
+                  ticks: { display: false, max: 100, min: 0 }
+                }
+              },
+              plugins: { legend: { display: false } }
+            }
+          });
+          chartObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    chartObserver.observe(document.querySelector('.skills-chart-container'));
+  }
 
   /* ── 6. SMOOTH ANCHOR (fallback for older browsers) ──────── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -174,7 +211,7 @@
 
     document.addEventListener('mousemove', e => {
       glow.style.left = e.clientX + 'px';
-      glow.style.top  = e.clientY + 'px';
+      glow.style.top = e.clientY + 'px';
     }, { passive: true });
   }
 
